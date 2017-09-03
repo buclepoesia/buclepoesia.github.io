@@ -1,0 +1,81 @@
+<div class="home">
+
+  <custom-header></custom-header>
+
+  <main data-sr-container='{"vFactor": 0.2 }'>
+    <section class="page" full-size>
+      <div class="page-main"
+          ng-parallax
+          pattern="getSrc(homePattern)"
+          speed="0"
+          reverse="true"
+          full-size>
+        <img class="logo" src="img/bucle.svg" />
+        <div class="quote" ng-animate-swap="quote">
+          "{{ quote }}"
+          <div class="writer">
+            {{ writer }}
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="poem"
+        ng-init="poemHover=false"
+        ng-repeat="poem in poems"
+        id="{{poem.id}}"
+        full-size>
+      <div class="poem-background"
+        ng-class="{hover:poemHover}"
+        ng-parallax
+        pattern="getSrc(poem.img)"
+        speed="0"
+        reverse="true"
+        full-size>
+      </div>
+      <div class="text"
+          ng-mouseleave="poemHover=false"
+          ng-mouseover="poemHover=true">
+        <div class="title cursor-pointer" ng-click="goPoem(poem.id)" x-sr="enter top over 3s">
+          {{ poem.title }}
+        </div>
+        <div class="date" data-sr="enter top over 3s">
+          {{ poem.date }}
+        </div>
+        <ul class="verse" data-sr="enter top over 3s">
+          <li ng-repeat="verse in poem.poem[0] | limitTo:4">
+            {{ verse }}
+          </li>
+        </ul>
+        <div class="more cursor-pointer"
+            ng-show="poem.poem[0].length > 4 || poem.poem.length >= 2"
+            ng-click="goPoem(poem.id)" data-sr="enter top over 3s">
+          Seguir leyendo...
+        </div>
+      </div>
+    </section>
+    <section class="page" full-size>
+      <div class="page-footer"
+          id="grain"
+          ng-parallax
+          speed="0"
+          reverse="true"
+          full-size>
+        <div class="text">
+          <div class="subtitle">
+            <span ng-click=goTexts() class="cursor-pointer">
+              Textos
+            </span>
+            <span ng-show="showNext">
+              |
+            </span>
+            <span ng-click=goNext() ng-show="showNext" class="cursor-pointer">
+              Página siguiente
+            </span>
+          </div>
+        </div>
+        <main-footer></main-footer>
+      </div>
+    </section>
+  </main>
+
+</div>

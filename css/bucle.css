@@ -1,0 +1,270 @@
+body {
+  background-color: #212121;
+  color: #FFFFFF;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+@media (max-width: 320px) {
+  body {
+    font-size: 6px;
+  }
+  body .home .page-main .text,
+  body .home .poem .text,
+  body .poems .text,
+  body .writers .text {
+    padding-left: 30px;
+  }
+  body .home .page-main .subtitle,
+  body .home .poem .verse,
+  body .poems .text .stranza .verse li,
+  body .writers .text .description {
+    font-size: 3.5em;
+  }
+  body .home .poem .date,
+  body .poems .text .writer,
+  body .poems .text .date,
+  body header div.menu ul.modules li {
+    font-size: 2em;
+  }
+  body .home .poem .more {
+    font-size: 2em;
+  }
+  body footer {
+    font-size: 1.5em;
+  }
+}
+@media (min-width: 321px) and (max-width: 375px) {
+  body {
+    font-size: 10px;
+  }
+  body .home .page-main .text,
+  body .home .poem .text,
+  body .poems .text,
+  body .writers .text {
+    padding-left: 30px;
+  }
+  body .home .page-main .subtitle,
+  body .home .poem .verse,
+  body .poems .text .stranza .verse li,
+  body .writers .text .description {
+    font-size: 3.5em;
+  }
+  body .home .poem .date,
+  body .poems .text .writer,
+  body .poems .text .date,
+  body header div.menu ul.modules li {
+    font-size: 2em;
+  }
+  body .home .poem .more {
+    font-size: 2em;
+  }
+  body footer {
+    font-size: 1.5em;
+  }
+}
+@media (min-width: 376px) and (max-width: 425px) {
+  body {
+    font-size: 12px;
+  }
+  body .home .page-main .text,
+  body .home .poem .text,
+  body .poems .text,
+  body .writers .text {
+    padding-left: 30px;
+  }
+  body .home .page-main .subtitle,
+  body .home .poem .verse,
+  body .poems .text .stranza .verse li,
+  body .writers .text .description {
+    font-size: 3.5em;
+  }
+  body .home .poem .date,
+  body .poems .text .writer,
+  body .poems .text .date,
+  body header div.menu ul.modules li {
+    font-size: 2em;
+  }
+  body .home .poem .more {
+    font-size: 2em;
+  }
+  body footer {
+    font-size: 1.5em;
+  }
+}
+
+header {
+  width: 100%;
+  height: 48px;
+  position: fixed;
+  z-index: 9999;
+  top: 20px;
+}
+
+  header .logo-link {
+    left: 20px;
+    border-radius: 24px;
+    position: fixed;
+    width: 48px;
+    height: 48px;
+    overflow: hidden;
+  }
+    header .logo-link .logo {
+      background-color: #FFFFFF;
+      background-image: url(../logo.svg);
+      display: block;
+      position: absolute;
+      width: 48px;
+      height: 48px;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+  header .menu {
+    right: 20px;
+    position: fixed;
+  }
+
+    header .menu button {
+      right: 20px;
+      position: fixed;
+      background-color: inherit;
+      border: inherit;
+      padding: 0;
+    }
+    header .menu button:focus {
+      outline: inherit;
+    }
+
+      header .menu button svg {
+        fill: #FFFFFF;
+      }
+
+    header .menu ul.modules {
+      background-color: #212121;
+      margin-top: 33px;
+      padding: 0;
+      list-style: none;
+      font-size: 1.4em;
+      text-align: center;
+    }
+
+    header .menu ul.modules li {
+      padding: 10px 20px 10px 20px;
+    }
+    header .menu ul.modules li:last-child {
+      padding-bottom: 20px;
+    }
+    header .menu ul.modules li:first-child {
+      padding-top: 20px;
+    }
+    header .menu ul.modules li:hover {
+      font-style: italic;
+    }
+    header .menu ul.modules li a {
+      color: inherit;
+      text-decoration: inherit;
+    }
+
+.home .poem .title,
+.poems .text .title,
+.writers .text .title {
+  font-family: 'Gentium Basic', serif;
+  font-size: 6em;
+}
+
+.quote.ng-enter,
+.quote.ng-leave {
+  transition: all 1s;
+}
+
+.writer.ng-enter,
+.writer.ng-leave {
+  transition: all 0.2s;
+}
+.quote.ng-enter,
+.writer.ng-enter {
+  opacity: 0;
+}
+.quote.ng-enter-active,
+.writer.ng-enter-active {
+  opacity: 1;
+}
+.quote.ng-leave,
+.writer.ng-leave {
+  opacity: 1;
+}
+.quote.ng-leave-active,
+.writer.ng-leave-active {
+  opacity: 0;
+}
+
+::-moz-selection {
+  background: #FFFFFF;
+  color: #212121;
+}
+::selection {
+  background: #FFFFFF;
+  color: #212121;
+}
+
+footer.main-footer {
+  text-align: center;
+  width: 100%;
+  z-index: 3000;
+  bottom: 0;
+  left: 0;
+  border-top: 1px solid #FFFFFF;
+}
+.home footer.main-footer {
+  position: absolute;
+}
+footer.main-footer div {
+  padding: 20px;;
+}
+  footer.main-footer section.made {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+    footer.main-footer section.social a {
+      margin-right: 20px;
+      font-weight: bold;
+      color: #FFFFFF;
+    }
+    footer.main-footer section.social a:last-child {
+      margin-right: 0px;
+    }
+    footer.main-footer section.made p,
+    footer.main-footer section.copyright p {
+      margin: 0;
+    }
+    footer.main-footer section.made p a,
+    footer.main-footer section.copyright p a {
+      color: inherit;
+      font-weight: bold;
+    }
+
+footer.custom-footer {
+  position: relative;
+  z-index: 3000;
+  bottom: 0;
+  left: 0;
+  padding: 20px;
+}
+.poems footer.custom-footer,
+.writers footer.custom-footer {
+  position: inherit;
+}
+  footer section.custom-footer {
+    font-size: 0.9em;
+    font-weight: lighter;
+    padding: 5px;
+  }
+
+
+.cursor-pointer {
+  cursor: pointer;
+}
